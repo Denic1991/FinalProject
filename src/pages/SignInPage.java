@@ -60,6 +60,16 @@ public class SignInPage {
 		this.clickLogInButton();
 	}
 	
+	public WebElement getSingOut() {
+		return this.driver.findElement(By.xpath(this.locators.getProperty("sing_out")));
+	}
 	
+	public boolean isSingInSuccessful() {
+		boolean displayed = false;
+		if (this.getSingOut().isDisplayed()) {
+			displayed = true;
+		}
+		return displayed;
+	}
 
 }

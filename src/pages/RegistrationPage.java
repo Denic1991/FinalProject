@@ -186,4 +186,37 @@ public class RegistrationPage {
 	public void clicSaveAccount() {
 		this.getSaveAccountButton().click();
 	}
+	
+	public void registrationForm(String userID, String newPassword, String repeatPassword, String name, String lastName,
+			                                    String email, String phone, String address1, String address2, String city, 
+			                                    String state, String zip, String country, String language, String category ) {
+		this.setUserID(userID);
+		this.setNewPassword(newPassword);
+		this.setRepeatPassword(repeatPassword);
+		this.setFirstName(name);
+		this.setLastName(lastName);
+		this.setEmail(email);
+		this.setPhone(phone);
+		this.setAddress1(address1);
+		this.setAddress2(address2);
+		this.setCity(city);
+		this.setState(state);
+		this.setZip(zip);
+		this.setCountry(country);
+		this.setLanguagePreference(language);
+		this.setFavoriteCategory(category);
+			
+	}
+	
+	public WebElement getLogoImg() {
+		return this.driver.findElement(By.xpath(this.locators.getProperty("logo_img")));
+	}
+	
+	public boolean isRegistrationSuccessful() {
+		boolean displayed = false;
+		if (this.getLogoImg().isDisplayed()) {
+			displayed = true;
+		}
+		return displayed;
+	}
 }
