@@ -50,7 +50,7 @@ public class SignInPage {
 		return this.driver.findElement(By.xpath(this.locators.getProperty("register")));
 	}
 	
-	public void clicRegisterNow() {
+	public void clickRegisterNow() {
 		this.getRegister().click();
 	}
 	

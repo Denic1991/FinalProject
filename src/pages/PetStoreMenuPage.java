@@ -30,6 +30,10 @@ public class PetStoreMenuPage {
 		this.getSignInButton().click();
 	}
 	
+	public WebElement getSingInMessage() {
+		return this.driver.findElement(By.xpath(this.locators.getProperty("sing_in_message")));
+	}
+	
 	public List<WebElement> getCenterNaviLinks() {
 		return this.driver.findElements(By.xpath(this.locators.getProperty("center_menu")));
 	}
@@ -99,10 +103,7 @@ public class PetStoreMenuPage {
 		return status;
 	}
 	
-	public WebElement getSingInMessage() {
-		return this.driver.findElement(By.xpath(this.locators.getProperty("sing_in_message")));
-	}
-	
+
 	public boolean isSingInPageValid() {
 		boolean displayed = false;
 		if(this.getSingInMessage().isDisplayed()) {

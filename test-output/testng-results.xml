@@ -1,29 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="16798" started-at="2020-03-29T14:26:12Z" finished-at="2020-03-29T14:26:29Z">
+  <suite name="Default suite" duration-ms="43353" started-at="2020-03-30T17:08:24Z" finished-at="2020-03-30T17:09:07Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="16798" started-at="2020-03-29T14:26:12Z" finished-at="2020-03-29T14:26:29Z">
-      <class name="tests.PetStoreMenuPageTest">
-        <test-method status="PASS" signature="setup()[pri:0, instance:tests.PetStoreMenuPageTest@4501b7af]" name="setup" is-config="true" duration-ms="7890" started-at="2020-03-29T16:26:12Z" finished-at="2020-03-29T16:26:20Z">
+    <test name="Default test" duration-ms="43353" started-at="2020-03-30T17:08:24Z" finished-at="2020-03-30T17:09:07Z">
+      <class name="tests.SingInPageTest">
+        <test-method status="PASS" signature="setup()[pri:0, instance:tests.SingInPageTest@4501b7af]" name="setup" is-config="true" duration-ms="5107" started-at="2020-03-30T19:08:24Z" finished-at="2020-03-30T19:08:29Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="linksVerification()[pri:0, instance:tests.PetStoreMenuPageTest@4501b7af]" name="linksVerification" duration-ms="6342" started-at="2020-03-29T16:26:20Z" finished-at="2020-03-29T16:26:26Z">
+        <test-method status="PASS" signature="SingInTest()[pri:0, instance:tests.SingInPageTest@4501b7af]" name="SingInTest" duration-ms="37929" started-at="2020-03-30T19:08:29Z" finished-at="2020-03-30T19:09:07Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- linksVerification -->
-        <test-method status="PASS" signature="singInButton()[pri:0, instance:tests.PetStoreMenuPageTest@4501b7af]" name="singInButton" duration-ms="457" started-at="2020-03-29T16:26:26Z" finished-at="2020-03-29T16:26:27Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- singInButton -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:tests.PetStoreMenuPageTest@4501b7af]" name="afterClass" is-config="true" duration-ms="2075" started-at="2020-03-29T16:26:27Z" finished-at="2020-03-29T16:26:29Z">
+        </test-method> <!-- SingInTest -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:tests.SingInPageTest@4501b7af]" name="afterClass" is-config="true" duration-ms="284" started-at="2020-03-30T19:09:07Z" finished-at="2020-03-30T19:09:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
-      </class> <!-- tests.PetStoreMenuPageTest -->
+      </class> <!-- tests.SingInPageTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
