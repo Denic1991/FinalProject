@@ -100,8 +100,8 @@ public class RegistrationPage {
 	}
 	
 	public void setAddress2(String address2) {
-		this.getAddress1().clear();
-		this.getAddress1().sendKeys(address2);
+		this.getAddress2().clear();
+		this.getAddress2().sendKeys(address2);
 	}
 	
 	public WebElement getCity() {
@@ -189,7 +189,7 @@ public class RegistrationPage {
 	
 	public void registrationForm(String userID, String newPassword, String repeatPassword, String name, String lastName,
 			                                    String email, String phone, String address1, String address2, String city, 
-			                                    String state, String zip, String country, String language, String category ) {
+			                                    String state, String zip, String country ) {
 		this.setUserID(userID);
 		this.setNewPassword(newPassword);
 		this.setRepeatPassword(repeatPassword);
@@ -203,9 +203,7 @@ public class RegistrationPage {
 		this.setState(state);
 		this.setZip(zip);
 		this.setCountry(country);
-		this.setLanguagePreference(language);
-		this.setFavoriteCategory(category);
-			
+
 	}
 	
 	public WebElement getLogoImg() {
