@@ -28,15 +28,15 @@ public class HomePageTest {
 		System.setProperty("webdriver.chrome.driver", "driver-lib\\chromedriver.exe");
 		this.driver = new ChromeDriver();
 		this.locators =  new Properties();
-		locators.load(new FileInputStream("config/petstore.properties"));
-		driver.manage().window().maximize();
-		driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);		
+		this.locators.load(new FileInputStream("config/petstore.properties"));
+		this.driver.manage().window().maximize();
+		this.driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
+		this.driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);		
 	}
 	
 	@Test 
 	public void EnterPageTest() {
-		driver.navigate().to(this.locators.getProperty("petstore_url"));
+		this.driver.navigate().to(this.locators.getProperty("petstore_url"));
 		
 		HomePage hp = new HomePage(driver, locators, waiter);
 		hp.clickEnterButton();
