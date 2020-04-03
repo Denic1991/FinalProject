@@ -28,16 +28,16 @@ public class PetStoreMenuPageTest {
 		System.setProperty("webdriver.chrome.driver", "driver-lib\\chromedriver.exe");
 		this.driver = new ChromeDriver();
 		this.locators =  new Properties();
-		locators.load(new FileInputStream("config/petstore.properties"));
+		this.locators.load(new FileInputStream("config/petstore.properties"));
 
-		driver.manage().window().maximize();
-		driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);		
+		this.driver.manage().window().maximize();
+		this.driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
+		this.driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);		
 	}
 	
-	@Test
+	@Test(priority = 1)
 	public void linksVerification() {
-		driver.navigate().to(this.locators.getProperty("petstore_menu_url"));
+		this.driver.navigate().to(this.locators.getProperty("petstore_menu_url"));
 		PetStoreMenuPage mp = new PetStoreMenuPage(driver, locators, waiter);
 		
 		Assert.assertTrue(mp.checkCenterNaviLinks());
@@ -45,9 +45,21 @@ public class PetStoreMenuPageTest {
 		Assert.assertTrue(mp.checkImageNaviLinks());
 				
 	}
-	@Test
+	
+	@Test(priority = 2)
+	public void categoryVerification() {
+		this.driver.navigate().to(this.locators.getProperty("petstore_menu_url"));
+		PetStoreMenuPage mp = new PetStoreMenuPage(driver, locators, waiter);
+		
+		Assert.assertTrue(mp.checkCenterNaviLinksCategory());
+		Assert.assertTrue(mp.checkLeftNaviLinksCategory());
+		Assert.assertTrue(mp.checkImageNaviLinksCategory());
+
+	}
+	
+	@Test(priority = 3)
 	public void singInButtonTest() {
-		driver.navigate().to(this.locators.getProperty("petstore_menu_url"));
+		this.driver.navigate().to(this.locators.getProperty("petstore_menu_url"));
 		PetStoreMenuPage mp = new PetStoreMenuPage(driver, locators, waiter);
 		mp.clickSingIn();
 		

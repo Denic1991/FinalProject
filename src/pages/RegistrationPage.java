@@ -75,8 +75,7 @@ public class RegistrationPage {
 	}
 	
 	public WebElement getPhone() {
-		return this.driver.findElement(By.xpath(this.locators.getProperty("phone")));
-		
+		return this.driver.findElement(By.xpath(this.locators.getProperty("phone")));	
 	}
 	
 	public void setPhone(String phone) {
@@ -85,8 +84,7 @@ public class RegistrationPage {
 	}
 	
 	public WebElement getAddress1() {
-		return this.driver.findElement(By.xpath(this.locators.getProperty("address_1")));
-		
+		return this.driver.findElement(By.xpath(this.locators.getProperty("address_1")));	
 	}
 	
 	public void setAddress1(String address1) {
@@ -95,8 +93,7 @@ public class RegistrationPage {
 	}
 	
 	public WebElement getAddress2() {
-		return this.driver.findElement(By.xpath(this.locators.getProperty("address_2")));
-		
+		return this.driver.findElement(By.xpath(this.locators.getProperty("address_2")));	
 	}
 	
 	public void setAddress2(String address2) {
@@ -106,7 +103,6 @@ public class RegistrationPage {
 	
 	public WebElement getCity() {
 		return this.driver.findElement(By.xpath(this.locators.getProperty("city")));
-		
 	}
 	
 	public void setCity(String city) {
@@ -115,8 +111,7 @@ public class RegistrationPage {
 	}
 	
 	public WebElement getState() {
-		return this.driver.findElement(By.xpath(this.locators.getProperty("state")));
-		
+		return this.driver.findElement(By.xpath(this.locators.getProperty("state")));	
 	}
 	
 	public void setState(String state) {
@@ -125,8 +120,7 @@ public class RegistrationPage {
 	}
 	
 	public WebElement getZip() {
-		return this.driver.findElement(By.xpath(this.locators.getProperty("zip")));
-		
+		return this.driver.findElement(By.xpath(this.locators.getProperty("zip")));	
 	}
 	
 	public void setZip(String zip) {
@@ -135,8 +129,7 @@ public class RegistrationPage {
 	}
 	
 	public WebElement getCountry() {
-		return this.driver.findElement(By.xpath(this.locators.getProperty("country")));
-		
+		return this.driver.findElement(By.xpath(this.locators.getProperty("country")));	
 	}
 	
 	public void setCountry(String country) {
@@ -149,18 +142,16 @@ public class RegistrationPage {
 	}
 	
 	public void setLanguagePreference(String language) {
-		Select lp = new Select(this.getFavouriteCategoty());
-		lp.selectByValue(language);
-		
+		Select lp = new Select(this.getFavouriteCategoty());	
 	}
+	
 	public WebElement getFavouriteCategoty() {
 		return this.driver.findElement(By.xpath(this.locators.getProperty("favourite_category")));
 	}
 	
 	public void setFavoriteCategory(String category) {
 		Select fc = new Select(this.getFavouriteCategoty());
-		fc.selectByValue(category);
-		
+		fc.selectByValue(category);	
 	}
 	
 	public WebElement getEnableMyList() {
@@ -203,7 +194,6 @@ public class RegistrationPage {
 		this.setState(state);
 		this.setZip(zip);
 		this.setCountry(country);
-
 	}
 	
 	public WebElement getLogoImg() {

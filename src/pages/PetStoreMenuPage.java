@@ -22,6 +22,7 @@ public class PetStoreMenuPage {
 		this.locators = locators;
 		this.waiter = waiter;
 	}
+	
 	public WebElement getSignInButton() {
 		return this.driver.findElement(By.xpath(this.locators.getProperty("sing_in")));
 	}
@@ -38,6 +39,14 @@ public class PetStoreMenuPage {
 		return this.driver.findElements(By.xpath(this.locators.getProperty("center_menu")));
 	}
 	
+	public List<WebElement> getLeftNavLinks() {
+		return this.driver.findElements(By.xpath(this.locators.getProperty("left_menu")));
+	}
+	
+	public List<WebElement> getImageNavLinks() {
+		return this.driver.findElements(By.xpath(this.locators.getProperty("image_menu")));
+	}
+	
 	public boolean checkCenterNaviLinks() {
 	List<WebElement> links = this.getCenterNaviLinks();
 	boolean itIsOk = true;
@@ -52,9 +61,24 @@ public class PetStoreMenuPage {
 	return itIsOk;
 	}
 	
-	public List<WebElement> getLeftNavLinks() {
-		return this.driver.findElements(By.xpath(this.locators.getProperty("left_menu")));
+	public boolean checkCenterNaviLinksCategory() {
+		List<WebElement> links = this.getCenterNaviLinks();
+		boolean categoty = true;
+		for (int i = 0; i < links.size(); i++) {
+			String hrefName = links.get(i).getAttribute("href").toLowerCase();
+			links.get(i).click();
+			String categoryName = this.driver.findElement(By.xpath(this.locators.getProperty("category_name"))).getText();
+			if(!hrefName.contains(categoryName.toLowerCase())) {
+				categoty = false;
+				break;
+			}
+			this.driver.navigate().to(this.locators.getProperty("petstore_menu_url"));
+			links = this.getCenterNaviLinks();
+			
+		}
+		return categoty;
 	}
+	
 	
 	public boolean checkLeftNaviLinks() {
 	List<WebElement> links = this.getLeftNavLinks();
@@ -70,8 +94,22 @@ public class PetStoreMenuPage {
 	return itIsOk;
 	}
 	
-	public List<WebElement> getImageNavLinks() {
-		return this.driver.findElements(By.xpath(this.locators.getProperty("image_menu")));
+	public boolean checkLeftNaviLinksCategory() {
+		List<WebElement> links = this.getLeftNavLinks();
+		boolean categoty = true;
+		for (int i = 0; i < links.size(); i++) {
+			String hrefName = links.get(i).getAttribute("href").toLowerCase();
+			links.get(i).click();
+			String categoryName = this.driver.findElement(By.xpath(this.locators.getProperty("category_name"))).getText();
+			if(!hrefName.contains(categoryName.toLowerCase())) {
+				categoty = false;
+				break;
+			}
+			this.driver.navigate().to(this.locators.getProperty("petstore_menu_url"));
+			links = this.getCenterNaviLinks();
+			
+		}
+		return categoty;
 	}
 	
 	public boolean checkImageNaviLinks() {
@@ -86,6 +124,24 @@ public class PetStoreMenuPage {
 		}
 	}
 	return itIsOk;
+	}
+	
+	public boolean checkImageNaviLinksCategory() {
+		List<WebElement> links = this.getImageNavLinks();
+		boolean categoty = true;
+		for (int i = 0; i < links.size(); i++) {
+			String hrefName = links.get(i).getAttribute("href").toLowerCase();
+			links.get(i).click();
+			String categoryName = this.driver.findElement(By.xpath(this.locators.getProperty("category_name"))).getText();
+			if(!hrefName.contains(categoryName.toLowerCase())) {
+				categoty = false;
+				break;
+			}
+			this.driver.navigate().to(this.locators.getProperty("petstore_menu_url"));
+			links = this.getCenterNaviLinks();
+			
+		}
+		return categoty;
 	}
 	
 	public int verifyURLStatus(String urlString) {
@@ -103,7 +159,6 @@ public class PetStoreMenuPage {
 		return status;
 	}
 	
-
 	public boolean isSingInPageValid() {
 		boolean displayed = false;
 		if(this.getSingInMessage().isDisplayed()) {
