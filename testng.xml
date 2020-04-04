@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Testing JPetStore">
+    <test name="Test">
+         <classes>
+             <class name="tests.HomePageTest"/>
+             <class name="tests.PetStoreMenuPageTest"/>
+             <class name="tests.RegistrationPageTest"/>
+             <class name="tests.SingInPageTest"/>
+             <class name="tests.CartPageTest"/>
+          </classes>
+     </test> <!-- Test -->
+</suite> <!-- Suite -->
