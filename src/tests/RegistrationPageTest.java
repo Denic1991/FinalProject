@@ -61,8 +61,10 @@ public class RegistrationPageTest {
 			String state = ExcelUtils.getDataAt(i, 9);
 			String zip = ExcelUtils.getDataAt(i, 10);
 			String country = ExcelUtils.getDataAt(i, 11);
+			String language = ExcelUtils.getDataAt(i, 12);
+			String category = ExcelUtils.getDataAt(i, 13);
 			
-			rp.registrationForm(userID, newPassword, repeatPassword, name, lastName, email, phone, address1, address2, city, state, zip, country);
+			rp.registrationForm(userID, newPassword, repeatPassword, name, lastName, email, phone, address1, address2, city, state, zip, country, language, category);
 			rp.clicSaveAccount();
 			sa.assertTrue(rp.isRegistrationSuccessful());
 		

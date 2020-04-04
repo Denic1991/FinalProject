@@ -39,7 +39,7 @@ public class CartPageTest {
 		this.driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);		
 	}
 	
-	@Test(priority = 1) 
+	@Test
 	public void addItemsTest() {
 		CartPage cp = new CartPage(driver, locators, waiter);
 		StoreItemPage sip = new StoreItemPage(driver, locators, waiter);
@@ -58,7 +58,7 @@ public class CartPageTest {
 		
 	}
 		
-	@Test(priority = 2)
+	@Test
 	public void deleteCookies() {
 		this.driver.navigate().to(this.locators.getProperty("cart_url"));
 		this.driver.manage().deleteAllCookies();

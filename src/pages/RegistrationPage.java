@@ -142,7 +142,8 @@ public class RegistrationPage {
 	}
 	
 	public void setLanguagePreference(String language) {
-		Select lp = new Select(this.getFavouriteCategoty());	
+		Select lp = new Select(this.getLanguagePreference());
+		lp.selectByValue(language);
 	}
 	
 	public WebElement getFavouriteCategoty() {
@@ -180,7 +181,7 @@ public class RegistrationPage {
 	
 	public void registrationForm(String userID, String newPassword, String repeatPassword, String name, String lastName,
 			                                    String email, String phone, String address1, String address2, String city, 
-			                                    String state, String zip, String country ) {
+			                                    String state, String zip, String country, String language, String category ) {
 		this.setUserID(userID);
 		this.setNewPassword(newPassword);
 		this.setRepeatPassword(repeatPassword);
@@ -194,6 +195,8 @@ public class RegistrationPage {
 		this.setState(state);
 		this.setZip(zip);
 		this.setCountry(country);
+		this.setLanguagePreference(language);
+		this.setFavoriteCategory(category);
 	}
 	
 	public WebElement getLogoImg() {

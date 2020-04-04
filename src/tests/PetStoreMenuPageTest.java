@@ -35,7 +35,7 @@ public class PetStoreMenuPageTest {
 		this.driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);		
 	}
 	
-	@Test(priority = 1)
+	@Test
 	public void linksVerification() {
 		this.driver.navigate().to(this.locators.getProperty("petstore_menu_url"));
 		PetStoreMenuPage mp = new PetStoreMenuPage(driver, locators, waiter);
@@ -46,7 +46,7 @@ public class PetStoreMenuPageTest {
 				
 	}
 	
-	@Test(priority = 2)
+	@Test
 	public void categoryVerification() {
 		this.driver.navigate().to(this.locators.getProperty("petstore_menu_url"));
 		PetStoreMenuPage mp = new PetStoreMenuPage(driver, locators, waiter);
@@ -57,7 +57,7 @@ public class PetStoreMenuPageTest {
 
 	}
 	
-	@Test(priority = 3)
+	@Test
 	public void singInButtonTest() {
 		this.driver.navigate().to(this.locators.getProperty("petstore_menu_url"));
 		PetStoreMenuPage mp = new PetStoreMenuPage(driver, locators, waiter);
