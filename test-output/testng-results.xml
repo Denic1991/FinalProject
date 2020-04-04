@@ -1,25 +1,93 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="8" passed="8">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="43353" started-at="2020-03-30T17:08:24Z" finished-at="2020-03-30T17:09:07Z">
+  <suite name="Testing JPetStore" duration-ms="773836" started-at="2020-04-04T21:34:37Z" finished-at="2020-04-04T21:47:31Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="43353" started-at="2020-03-30T17:08:24Z" finished-at="2020-03-30T17:09:07Z">
-      <class name="tests.SingInPageTest">
-        <test-method status="PASS" signature="setup()[pri:0, instance:tests.SingInPageTest@4501b7af]" name="setup" is-config="true" duration-ms="5107" started-at="2020-03-30T19:08:24Z" finished-at="2020-03-30T19:08:29Z">
+    <test name="Test" duration-ms="773836" started-at="2020-04-04T21:34:37Z" finished-at="2020-04-04T21:47:31Z">
+      <class name="tests.CartPageTest">
+        <test-method status="PASS" signature="setup()[pri:0, instance:tests.CartPageTest@68c4039c]" name="setup" is-config="true" duration-ms="4273" started-at="2020-04-04T23:47:19Z" finished-at="2020-04-04T23:47:24Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="SingInTest()[pri:0, instance:tests.SingInPageTest@4501b7af]" name="SingInTest" duration-ms="37929" started-at="2020-03-30T19:08:29Z" finished-at="2020-03-30T19:09:07Z">
+        <test-method status="PASS" signature="addItemsTest()[pri:0, instance:tests.CartPageTest@68c4039c]" name="addItemsTest" duration-ms="6940" started-at="2020-04-04T23:47:24Z" finished-at="2020-04-04T23:47:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addItemsTest -->
+        <test-method status="PASS" signature="deleteCookies()[pri:0, instance:tests.CartPageTest@68c4039c]" name="deleteCookies" duration-ms="324" started-at="2020-04-04T23:47:31Z" finished-at="2020-04-04T23:47:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteCookies -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:tests.CartPageTest@68c4039c]" name="afterClass" is-config="true" duration-ms="132" started-at="2020-04-04T23:47:31Z" finished-at="2020-04-04T23:47:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- tests.CartPageTest -->
+      <class name="tests.HomePageTest">
+        <test-method status="PASS" signature="setup()[pri:0, instance:tests.HomePageTest@3ffc5af1]" name="setup" is-config="true" duration-ms="5728" started-at="2020-04-04T23:34:37Z" finished-at="2020-04-04T23:34:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="EnterPageTest()[pri:0, instance:tests.HomePageTest@3ffc5af1]" name="EnterPageTest" duration-ms="915" started-at="2020-04-04T23:34:43Z" finished-at="2020-04-04T23:34:44Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- EnterPageTest -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:tests.HomePageTest@3ffc5af1]" name="afterClass" is-config="true" duration-ms="168" started-at="2020-04-04T23:34:44Z" finished-at="2020-04-04T23:34:44Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- tests.HomePageTest -->
+      <class name="tests.RegistrationPageTest">
+        <test-method status="PASS" signature="setup()[pri:0, instance:tests.RegistrationPageTest@26653222]" name="setup" is-config="true" duration-ms="11550" started-at="2020-04-04T23:36:09Z" finished-at="2020-04-04T23:36:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="RegistrationTest()[pri:0, instance:tests.RegistrationPageTest@26653222]" name="RegistrationTest" duration-ms="407930" started-at="2020-04-04T23:36:21Z" finished-at="2020-04-04T23:43:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- RegistrationTest -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:tests.RegistrationPageTest@26653222]" name="afterClass" is-config="true" duration-ms="462" started-at="2020-04-04T23:43:08Z" finished-at="2020-04-04T23:43:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- tests.RegistrationPageTest -->
+      <class name="tests.SingInPageTest">
+        <test-method status="PASS" signature="setup()[pri:0, instance:tests.SingInPageTest@3532ec19]" name="setup" is-config="true" duration-ms="5717" started-at="2020-04-04T23:43:09Z" finished-at="2020-04-04T23:43:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="SingInTest()[pri:0, instance:tests.SingInPageTest@3532ec19]" name="SingInTest" duration-ms="244755" started-at="2020-04-04T23:43:15Z" finished-at="2020-04-04T23:47:19Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- SingInTest -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:tests.SingInPageTest@4501b7af]" name="afterClass" is-config="true" duration-ms="284" started-at="2020-03-30T19:09:07Z" finished-at="2020-03-30T19:09:07Z">
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:tests.SingInPageTest@3532ec19]" name="afterClass" is-config="true" duration-ms="78" started-at="2020-04-04T23:47:19Z" finished-at="2020-04-04T23:47:19Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
       </class> <!-- tests.SingInPageTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      <class name="tests.PetStoreMenuPageTest">
+        <test-method status="PASS" signature="setup()[pri:0, instance:tests.PetStoreMenuPageTest@5e5792a0]" name="setup" is-config="true" duration-ms="4053" started-at="2020-04-04T23:34:44Z" finished-at="2020-04-04T23:34:48Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="categoryVerification()[pri:0, instance:tests.PetStoreMenuPageTest@5e5792a0]" name="categoryVerification" duration-ms="71917" started-at="2020-04-04T23:34:48Z" finished-at="2020-04-04T23:36:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- categoryVerification -->
+        <test-method status="PASS" signature="linksVerification()[pri:0, instance:tests.PetStoreMenuPageTest@5e5792a0]" name="linksVerification" duration-ms="3283" started-at="2020-04-04T23:36:00Z" finished-at="2020-04-04T23:36:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- linksVerification -->
+        <test-method status="PASS" signature="singInButtonTest()[pri:0, instance:tests.PetStoreMenuPageTest@5e5792a0]" name="singInButtonTest" duration-ms="5477" started-at="2020-04-04T23:36:03Z" finished-at="2020-04-04T23:36:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- singInButtonTest -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:tests.PetStoreMenuPageTest@5e5792a0]" name="afterClass" is-config="true" duration-ms="77" started-at="2020-04-04T23:36:09Z" finished-at="2020-04-04T23:36:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- tests.PetStoreMenuPageTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Testing JPetStore -->
 </testng-results>
