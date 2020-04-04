@@ -34,7 +34,7 @@ public class RegistrationPageTest {
 		this.driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
 		this.driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);		
 	}
-	
+
 	@Test
 	public void RegistrationTest() {
 		this.driver.navigate().to(this.locators.getProperty("registration_url"));
@@ -69,7 +69,7 @@ public class RegistrationPageTest {
 			sa.assertTrue(rp.isRegistrationSuccessful());
 		
 			this.driver.navigate().to(this.locators.getProperty("registration_url"));
-	
+			
 		}
 		
 	}

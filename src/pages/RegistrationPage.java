@@ -197,6 +197,7 @@ public class RegistrationPage {
 		this.setCountry(country);
 		this.setLanguagePreference(language);
 		this.setFavoriteCategory(category);
+		
 	}
 	
 	public WebElement getLogoImg() {

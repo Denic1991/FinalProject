@@ -42,8 +42,7 @@ public class PetStoreMenuPageTest {
 		
 		Assert.assertTrue(mp.checkCenterNaviLinks());
 		Assert.assertTrue(mp.checkLeftNaviLinks());
-		Assert.assertTrue(mp.checkImageNaviLinks());
-				
+		Assert.assertTrue(mp.checkImageNaviLinks());		
 	}
 	
 	@Test
@@ -54,7 +53,6 @@ public class PetStoreMenuPageTest {
 		Assert.assertTrue(mp.checkCenterNaviLinksCategory());
 		Assert.assertTrue(mp.checkLeftNaviLinksCategory());
 		Assert.assertTrue(mp.checkImageNaviLinksCategory());
-
 	}
 	
 	@Test

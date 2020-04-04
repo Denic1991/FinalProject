@@ -63,7 +63,7 @@ public class CartPageTest {
 		this.driver.navigate().to(this.locators.getProperty("cart_url"));
 		this.driver.manage().deleteAllCookies();
 		this.driver.navigate().refresh();
-		Assert.assertTrue(this.driver.findElement(By.xpath(this.locators.getProperty("empty_cart_message"))).getText().contentEquals("Your cart is empty."));		
+		Assert.assertTrue(this.driver.findElement(By.xpath(this.locators.getProperty("empty_cart_message"))).getText().contentEquals("Your cart is empty."));	
 	}
 	
 	@AfterClass
